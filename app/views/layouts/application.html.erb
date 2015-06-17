@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Porfolio</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= csrf_meta_tags %>
+
+    <!-- <meta name="description" content="Paulina's Porfolio which includes apps, about, contact"> 
+    <meta name="author" content="Paulina Rodriguez"> -->
+
+    <!-- Bootstrap core CSS -->
+   	<!--  <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylesheet.css"> -->
+  </head>
+
+  <body>
+  <header class="navbar navbar-inverse navbar-fixed-top bk_clr">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+    <a class="navbar-brand" href="#">Pau's Projects</a>
+        </div>
+         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+  </header>
+
+<%= yield %>
+
+<footer class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <hr/>
+      <a href="https://github.com/plinarodriguez" target="_blank"><%= image_tag "git.jpg", width: "60em" %></a>
+      <a href="https://plus.google.com/112839409071390686234/about" target="_blank">
+      	<%= image_tag "google_plus.jpg", width: "50em" %></a> 
+    </div>
+  </div>
+</footer>
+<!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </body>
+</html>

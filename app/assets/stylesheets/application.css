@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree ../../../vendor/assets/stylesheets/.
+ *= require_self
+ */
+
+/************
+GLOBAL STYLES
+************/
+body {
+  padding-top: 75px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.clearfix:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+.bk_clr{
+	background-color: #002626;
+	background-image: none;
+}
+header a {
+	color: white;
+}
+header small {
+	color: #333;
+}
+header button.navbar-toggle {
+	border-color: white;
+}
+header button.navbar-toggle span {
+	border-color: white;
+	background-color: #ffffff;
+}
+nav {
+	background-color: #eee;
+	padding: 2px 0;
+	margin-bottom: 20px;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	background: none;
+	text-decoration: none;
+}
+footer {
+	margin-bottom: 30px;
+}
+/* images */
+img {
+	max-width: 100%;
+}
+/* links */
+a {
+	color: #99A8A8;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	color: #768282;
+	text-decoration: underline;
+}
+/* text */
+h1 {
+	color: #666;
+	margin-top: 0;
+	font-weight: 100;
+	font-size: 6rem;
+	letter-spacing: 1px;
+}
+h2, h3 {
+	color: #002626;
+}
+/***********
+CONTACT FORM
+***********/
+label,
+input,
+textarea {
+	display: block;
+}
+input,
+textarea {
+	margin-bottom: 20px;
+	padding: 5px;
+	box-sizing: border-box;
+	width: 100%;
+}
+/* Here I'll define some styles that give the contact page a fixed width at certain screen sizes */
+@media (min-width: 520px) {
+	.body-content {
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (min-width: 768px) {
+	.body-content {
+		max-width: 700px;
+	}
+}
+@media (min-width: 1200px) {
+	.body-content {
+		max-width: 1170px;
+	}
+}
+/* These styles create the responsive layout for the First Name and Last Name inputs */
+.split {
+	width: 100%;
+	box-sizing: border-box;
+}
+@media (min-width: 520px) {
+	.split {
+		width: 50%;
+		float: left;
+	}
+	.split-left {
+		padding-right: 10px;
+	}
+	.split-right {
+		padding-left: 10px;
+	}
+}
+
+/*********
+HOME PAGE
+*********/
+
+.portfolio-item {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	background-color: #ebebeb;
+	/*background-color: #9d9d9d;*/
+}
