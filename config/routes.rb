@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'portfolio#index'
-
   match 'about', to: 'portfolio#about', via: :get
   match 'contact', to: 'portfolio#contact', via: :get
+  post 'send' => 'portfolio#send', as: 'send_form'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
