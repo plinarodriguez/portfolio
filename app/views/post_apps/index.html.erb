@@ -1,4 +1,4 @@
-<h1>Listing post_apps</h1>
+<!-- <h1>Listing post_apps</h1>
 
 <table>
   <thead>
@@ -28,4 +28,16 @@
 
 <br>
 
-<%= link_to 'New Post app', new_post_app_path %>
+<%= link_to 'New Post app', new_post_app_path %> -->
+<h1 class="text-center">Portfolio</h1>
+<% @post_apps.each do |post_app| %>
+ <div class="col-sm-6 col-lg-4 text-center">
+    <div class="thumbnail portfolio-item">
+        <a href="<%= post_app.appUrl %>" target="_blank"><%= link_to image_tag(post_app.image.url(:med)), post_app.image.url %></a>
+        <h4><%= post_app.appName %>: <%= post_app.appDetails %></h4>
+    </div>
+  </div>
+<% end %>
+</div>
+
+

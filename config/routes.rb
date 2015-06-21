@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :post_apps
-
-  root 'portfolio#index'
+  root 'post_apps#index'
+  #root 'portfolio#index'
+  #match 'myApps', to: 'post_apps#myApps', as: 'myApps' 
   match 'about', to: 'portfolio#about', via: :get
   match 'contact', to: 'portfolio#contact', via: :get
   post 'send_form' => 'portfolio#sendform', as: 'send_form'
