@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Porfolio</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   	<%= csrf_meta_tags %>
-
-    <!-- <meta name="description" content="Paulina's Porfolio which includes apps, about, contact"> 
-    <meta name="author" content="Paulina Rodriguez"> -->
-
-    <!-- Bootstrap core CSS -->
-   	<!--  <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/stylesheet.css"> -->
+    <meta name="description" content="Paulina's Porfolio which includes apps, about, contact"> 
+    <meta name="author" content="Paulina Rodriguez">
   </head>
-
   <body>
-    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
   <header class="navbar navbar-inverse navbar-fixed-top bk_clr">
     <div class="container">
       <div class="navbar-header">
@@ -28,30 +19,37 @@
           <span class="icon-bar"></span>
         </button>
 
-    <a class="navbar-brand" href="#">Pau's Projects</a>
+    <!-- <a class="navbar-brand" href="">Pau's Projects</a>-->
+    <!-- <%= link_to 'Pau\'s Projects', root_path %> -->
         </div>
          <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
           <ul class="nav navbar-nav">
             <li><%= link_to 'Portfolio', root_path %></li>
             <li><%= link_to 'About', about_path %></li>
-            <li><%= link_to 'Contact', contact_path %></a></li>
+            <li><%= link_to 'Contact', contact_path %></li>
           </ul>
         </div>
       </div>
   </header>
-<main class="container">
-<%= yield %>
+  <main class="container">
+    <center> 
+      <h6 class="notice"><%= notice %></h6>
+      <h6 class="alert"><%= alert %></h6>
+    </center>
+    
+    <%= yield %>
+
   </main>
-<footer class="container">
-  <div class="row">
-    <div class="col-sm-12 text-center">
-      <hr/>
-      <a href="https://github.com/plinarodriguez" target="_blank"><%= image_tag "git.jpg", width: "60em" %></a>
-      <a href="https://plus.google.com/112839409071390686234/about" target="_blank">
-      	<%= image_tag "google_plus.jpg", width: "50em" %></a> 
+  <footer class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <hr/>
+        <a href="https://github.com/plinarodriguez" target="_blank"><%= image_tag "git.jpg", width: "60em" %></a>
+        <a href="https://plus.google.com/112839409071390686234/about" target="_blank">
+        	<%= image_tag "google_plus.jpg", width: "50em" %></a> 
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
