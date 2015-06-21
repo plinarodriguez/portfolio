@@ -8,6 +8,10 @@ class PortfolioController < ApplicationController
   def contact
   end
 
-  def send
+  def sendform
+  	ContactMailer.email_contact(params).deliver
+  	redirect_to contact_url, notice: "Your Contact Message has been sent"
   end
+
+
 end
