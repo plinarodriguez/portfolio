@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Appname:</strong>
+  <%= @post_app.appName %>
+</p>
+
+<p>
+  <strong>Appdetails:</strong>
+  <%= @post_app.appDetails %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= link_to image_tag(@post_app.image.url(:med)), @post_app.image.url %>
+</p>
+
+<p>
+  <strong>Appurl:</strong>
+  <%= @post_app.appUrl %>
+</p>
+
+<%= link_to 'Edit', edit_post_app_path(@post_app) %> |
+<%= link_to 'Back', post_apps_path %>

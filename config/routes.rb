@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :post_apps
+
   root 'portfolio#index'
   match 'about', to: 'portfolio#about', via: :get
   match 'contact', to: 'portfolio#contact', via: :get

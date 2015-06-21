@@ -1,0 +1,33 @@
+<%= form_for(@post_app, multipart: true) do |f| %>
+  <% if @post_app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post_app.errors.count, "error") %> prohibited this post_app from being saved:</h2>
+
+      <ul>
+      <% @post_app.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :appName %><br>
+    <%= f.text_field :appName %>
+  </div>
+  <div class="field">
+    <%= f.label :appDetails %><br>
+    <%= f.text_area :appDetails %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :appUrl %><br>
+    <%= f.text_field :appUrl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
