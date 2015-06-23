@@ -1,4 +1,5 @@
 class PostAppsController < ApplicationController
+  #before_filter :authenticate
   before_action :set_post_app, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
@@ -44,4 +45,11 @@ class PostAppsController < ApplicationController
     def post_app_params
       params[:post_app].permit(:appName, :appDetails, :image, :appUrl)
     end
+
+    #def authenticate
+  #authenticate_or_request_with_http_basic do |username, password|
+   # username == 'paulina' && password == 'pauPOW11'
+
+  #end
+#end
 end
