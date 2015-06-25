@@ -1,14 +1,10 @@
-<h1>Your Apps</h1>
-<center>
+<h1>Pau's Apps</h1>
+<!--<center>
 <table width:50% style="padding:1.0em;">
   <thead>
     <tr>
-      <!--15% -->
       <th width=30%><h3>Name</h3></th>
-      <!-- <th width=35%><h3>Details</h3></th>-->
-      <!--15% -->
       <th width=45%><h3>Logo</h3></th>
-      <!-- <th width=15%><h3>URL</h3></th> -->
       <th width=7%></th>
       <th width=5%></th>
       <th width=3%></th>
@@ -19,9 +15,7 @@
     <% @post_apps.each do |post_app| %>
       <tr>
         <td style="padding:0.2em"><%= post_app.appName %></td>
-        <!--<td style="padding:0.2em; padding-right:0.5em;"><%= post_app.appDetails %></td>-->
         <td style="padding:0.2em"><%= image_tag(post_app.image.url(:med)) %></td>
-        <!-- <td style="padding:0.2em; padding-right:0.8em;"><a href="<%= post_app.appUrl %>"><%= post_app.appUrl %></a></td> -->
         <td style="padding:0.2em;"><button type="button" class="btn btn-info"><%= link_to 'Show', post_app %></button></td>
         <td style="padding:0.2em"><button type="button" class="btn btn-warning" style="color:white;"><%= link_to 'Edit', edit_post_app_path(post_app) %></button></td>
         <td style="padding:0.2em"><button type="button" class="btn btn-danger"><%= link_to 'X', post_app, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
@@ -30,7 +24,17 @@
     <% end %>
   </tbody>
 </table>
-</center?
+</center>
+<br> -->
+
+<% @post_apps.each do |post_app| %>
+ <div class="col-sm-6 col-lg-4 text-center">
+    <div class="thumbnail portfolio-item"><%= link_to image_tag(post_app.image.url(:med)), post_app.appUrl %>
+        <h4><%= link_to post_app.appName, post_app.appUrl %></h4>
+    </div>
+  </div>
+<% end %>
+
 <br>
 
 
