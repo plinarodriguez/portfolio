@@ -1,24 +1,18 @@
-<p id="notice"><%= notice %></p>
 
+<center>
+  <%= link_to image_tag(@post_app.image.url(:med)), @post_app.image.url %>
+</center>
+<h1>
+  <%= @post_app.appName %> App
+</h1>
 <p>
-  <strong>Appname:</strong>
-  <%= @post_app.appName %>
-</p>
-
-<p>
-  <strong>Appdetails:</strong>
   <%= @post_app.appDetails %>
 </p>
-
 <p>
-  <strong>Image:</strong>
-  <%= link_to image_tag(@post_app.image.url(:med)), @post_app.image.url %>
+  <strong>URL:</strong> &nbsp; <a href="<%= @post_app.appUrl %>"><%= @post_app.appUrl %></a>
 </p>
-
-<p>
-  <strong>Appurl:</strong>
-  <%= @post_app.appUrl %>
-</p>
-
-<%= link_to 'Edit', edit_post_app_path(@post_app) %> |
-<%= link_to 'Back', post_apps_path %>
+<p>&nbsp;</p>
+<center>
+<button type="button" class="btn btn-warning" style="color:white;"> <%= link_to 'Edit', edit_post_app_path(@post_app) %> </button>  &nbsp;
+<button type="button" class="btn btn-info"><%= link_to 'Back', post_apps_path %></button>
+</center>
